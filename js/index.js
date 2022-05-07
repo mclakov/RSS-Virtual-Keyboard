@@ -1,30 +1,12 @@
-import KEYBORD_KEYS from './data';
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+import KEYS from '/js/data.js';
 
 
 const container = document.createElement('div');
-const h1 = document.createElement('div');
+const h1 = document.createElement('h1');
 const textBlock = document.createElement('div');
 const textArea = document.createElement('textarea');
 const keyboard = document.createElement('div');
-const h2 = document.createElement('div');
+const h2 = document.createElement('h2');
 const row_1 = document.createElement('div');
 const row_2 = document.createElement('div');
 const row_3 = document.createElement('div');
@@ -56,6 +38,21 @@ keyboard.append(row_5);
 container.append(h2);
 
 
+KEYS.map((elem, index) => {
+    let key = document.createElement('div');
+    let keySpan = document.createElement('span');
+
+
+
+
+
+
+    key.className = elem.class;
+
+    if (index >=0 && index <=13) {
+
+    }
+        })
 
 
 
@@ -69,6 +66,23 @@ container.append(h2);
 
 
 
-const keys = KEYBORD_KEYS.map((elem, index) => {
 
-})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
