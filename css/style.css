@@ -1,0 +1,39 @@
+.container {
+    margin: 0 auto;
+    width: 840px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.textBlock {
+    margin: 0 auto;
+    width: 800px;
+    height: 200px;
+}
+
+.textArea {
+    margin: 0 auto;
+    width: 800px;
+    height: 100%;
+    resize: none;
+}
+
+.key {
+    background-color: aliceblue;
+    border: 1px solid black;
+    width: 40px;
+    height: 40px;
+}
+
+.keyboard
+
+.row1 {
+    display: flex;
+    flex-direction: row;
+}
