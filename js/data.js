@@ -477,7 +477,7 @@ const KEYS = [
         }
     },
     {
-        class: "key key_left_control",
+        class: "key key_control",
         volume: {
             en: "Control",
             ru: "Control",

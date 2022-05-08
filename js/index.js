@@ -84,10 +84,17 @@ KEYS.map((elem, index) => {
     if (index >27 && index <=40) {
         row_3.append(key);
     };
-    if (index >40 && index <=53) {
+    if (index >40 && index <=52) {
         row_4.append(key);
     };
-    if (index >53 && index <=63) {
+    if (index >52 && index <60) {
+        row_5.append(key);
+    };
+    if (index >=60 && index <=61) {
+        nav.append(key);
+    };
+    row_5.append(nav);
+    if (index >=62 && index <=63) {
         row_5.append(key);
     };
         })

@@ -24,16 +24,78 @@
     resize: none;
 }
 
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    height: 250px;
+    margin-top: 30px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.row1, .row2, .row3, .row4, .row5 {
+    display: flex;
+    flex-direction: row;
+    width: 800px;
+    justify-content: space-between;
+}
+
 .key {
     background-color: aliceblue;
     border: 1px solid black;
     width: 40px;
     height: 40px;
+    text-align: center;
+    margin: auto;
+    /*margin: 5px;*/
 }
 
-.keyboard
-
-.row1 {
-    display: flex;
-    flex-direction: row;
+.key_backspace, .key_tab {
+    width: 80px;
 }
+
+.key_capslock, .key_enter {
+    width: 86px;
+}
+
+.key_left_shift, .key_right_shift {
+    width: 112px;
+}
+
+.key_down {
+    margin-top: 5px;
+}
+
+.key_space {
+    width: 260px;
+}
+
+.key_control, .key_left_option, .key_right_option {
+    width: 60px;
+}
+
+.key_left_command, .key_right_command {
+    width: 70px;
+}
+
+h2 {
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+span {
+    line-height: 40px;
+}
+.key_up , .key_down {
+    height: 16.5px;
+}
+
+.key_up span, .key_down span{
+    line-height: 0px;
+}
+
+
+
+
+
