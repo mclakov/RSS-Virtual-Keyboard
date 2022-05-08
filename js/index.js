@@ -26,7 +26,7 @@ row_5.className = "row5";
 nav.className = "nav";
 
 h1.innerHTML = "Virtual Keyboard"
-h2.innerHTML = "Клавиатура создана в операционной системе Windows Для переключения языка комбинация: левыe ctrl + alt"
+h2.innerHTML = "Клавиатура создана в операционной системе macOS Monterey. Для переключения языка комбинация: левыe ctrl + alt"
 
 
 document.body.append(container);
@@ -61,11 +61,10 @@ KEYS.map((elem, index) => {
     keySpanRu.innerHTML = elem.volume.ru;
     keySpanEn_fn.innerHTML = elem.volume.en_fn;
     keySpanRu_fn.innerHTML = elem.volume.ru_fn;
-    keySpanRu.className  = "hidden";
-    keySpanEn_fn.className  = "hidden";
-    keySpanRu_fn.className  = "hidden";
-
-
+    keySpanEn.className = "unselectable";
+    keySpanRu.className = "hidden unselectable";
+    keySpanEn_fn.className = "hidden unselectable";
+    keySpanRu_fn.className = "hidden unselectable";
 
 
     key.className = elem.class;
@@ -75,32 +74,70 @@ KEYS.map((elem, index) => {
     key.append(keySpanRu_fn);
 
 
-    if (index >=0 && index <=13) {
+    if (index >= 0 && index <= 13) {
         row_1.append(key);
-    };
-    if (index >13 && index <=27) {
+    }
+    ;
+    if (index > 13 && index <= 27) {
         row_2.append(key);
-    };
-    if (index >27 && index <=40) {
+    }
+    ;
+    if (index > 27 && index <= 40) {
         row_3.append(key);
-    };
-    if (index >40 && index <=52) {
+    }
+    ;
+    if (index > 40 && index <= 52) {
         row_4.append(key);
-    };
-    if (index >52 && index <60) {
+    }
+    ;
+    if (index > 52 && index < 60) {
         row_5.append(key);
-    };
-    if (index >=60 && index <=61) {
+    }
+    ;
+    if (index >= 60 && index <= 61) {
         nav.append(key);
-    };
+    }
+    ;
     row_5.append(nav);
-    if (index >=62 && index <=63) {
+    if (index >= 62 && index <= 63) {
         row_5.append(key);
-    };
-        })
+    }
+    ;
+});
 
 
+const setText = (letter) => {
+    textArea.value += letter
+};
 
+const remove = () => {
+    let keys = document.querySelector('span');
+    keys.classList.remove("active");
+}
+
+
+document.body.addEventListener('mousedown', (event) => {
+    let target = event.target;
+    if (target.closest('span')) {
+        target.closest('span').classList.toggle("active");
+        setText(target.closest('span').innerHTML);
+    }
+})
+
+document.body.addEventListener('mouseup', (event) => {
+    let keys = document.querySelectorAll('span');
+    keys.forEach(elem => {
+        elem.classList.remove("active");
+    })
+})
+
+let code =[];
+
+document.body.addEventListener('keydown', (event) => {
+    setText(event.key);
+    code.push(event.code)
+    console.log(code);
+})
 
 
 

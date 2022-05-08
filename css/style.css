@@ -48,34 +48,33 @@
     height: 40px;
     text-align: center;
     margin: auto;
-    /*margin: 5px;*/
 }
 
-.key_backspace, .key_tab {
+.Backspace, .Tab {
     width: 80px;
 }
 
-.key_capslock, .key_enter {
+.CapsLock, .Enter {
     width: 86px;
 }
 
-.key_left_shift, .key_right_shift {
+.ShiftLeft, .ShiftRight {
     width: 112px;
 }
 
-.key_down {
+.ArrowDown {
     margin-top: 5px;
 }
 
-.key_space {
+.Space {
     width: 260px;
 }
 
-.key_control, .key_left_option, .key_right_option {
+.ControlLeft, .AltLeft, .AltRight {
     width: 60px;
 }
 
-.key_left_command, .key_right_command {
+.MetaLeft, .MetaLeft {
     width: 70px;
 }
 
@@ -86,16 +85,40 @@ h2 {
 
 span {
     line-height: 40px;
+    width: 100%;
+    height: 100%;
+    display: block;
 }
-.key_up , .key_down {
+.ArrowUp, .ArrowDown {
     height: 16.5px;
 }
 
-.key_up span, .key_down span{
-    line-height: 0px;
+
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 
+.ArrowUp span, .ArrowDown span{
+    line-height: 0px;
+    padding-top: 7px;
+}
 
+.active {
+    margin: 0 auto;
+    height: 40px;
+    border-radius: 20px;
+    background-color: aqua;
+    transition: transform 0.3s;
+}
 
+span:hover {
+    background-color: aqua;
+}
 
