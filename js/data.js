@@ -214,10 +214,10 @@ const KEYS = [
             ru: "ц",
             en_fn: "W",
             ru_fn: "Ц",
-            en_cl: "",
-            ru_cl: "",
-            en_fn_cl: "",
-            ru_fn_cl: "",
+            en_cl: "W",
+            ru_cl: "Ц",
+            en_fn_cl: "w",
+            ru_fn_cl: "ц",
         }
     },
     {

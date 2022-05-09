@@ -4,6 +4,7 @@ import KEYS from '/js/data.js';
 
 
 let language = 'en';
+let capsLock = false;
 
 
 const container = document.createElement('div');
@@ -47,7 +48,7 @@ keyboard.append(row_5);
 container.append(h2);
 
 
-const createKeyboard = (language = 'en', keyCase = 'down') => {
+const createKeyboard = (language = 'en', keyShift = 'off', keyCl = 'off') => {
 
     KEYS.map((elem, index) => {
         let key = document.createElement('div');
@@ -55,35 +56,107 @@ const createKeyboard = (language = 'en', keyCase = 'down') => {
         let keySpanRu = document.createElement('span');
         let keySpanEn_fn = document.createElement('span');
         let keySpanRu_fn = document.createElement('span');
+        let keySpanEn_cl = document.createElement('span');
+        let keySpanRu_cl = document.createElement('span');
+        let keySpanEn_fn_cl = document.createElement('span');
+        let keySpanRu_fn_cl = document.createElement('span');
 
         keySpanEn.innerHTML = elem.volume.en;
         keySpanRu.innerHTML = elem.volume.ru;
         keySpanEn_fn.innerHTML = elem.volume.en_fn;
         keySpanRu_fn.innerHTML = elem.volume.ru_fn;
+        keySpanEn_cl.innerHTML = elem.volume.en_cl;
+        keySpanRu_cl.innerHTML = elem.volume.ru_cl;
+        keySpanEn_fn_cl.innerHTML = elem.volume.en_fn_cl;
+        keySpanRu_fn_cl.innerHTML = elem.volume.ru_fn_cl;
 
-        if (language === 'en' && keyCase === 'down') {
+        if (language === 'en' && keyShift === 'off' && keyCl === 'off') {
             keySpanEn.className = "en unselectable";
             keySpanRu.className = "ru hidden unselectable";
             keySpanEn_fn.className = "en_fn hidden unselectable";
             keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
         }
-        if (language === 'en' && keyCase === 'up') {
+        if (language === 'en' && keyShift === 'on' && keyCl === 'off') {
             keySpanEn.className = "en hidden unselectable";
             keySpanRu.className = "ru hidden unselectable";
             keySpanEn_fn.className = "en_fn unselectable";
             keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
         }
-        if (language === 'ru' && keyCase === 'down') {
+        if (language === 'ru' && keyShift === 'off' && keyCl === 'off') {
             keySpanEn.className = "en hidden unselectable";
             keySpanRu.className = "ru unselectable";
             keySpanEn_fn.className = "en_fn hidden unselectable";
             keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
         }
-        if (language === 'ru' && keyCase === 'up') {
+        if (language === 'ru' && keyShift === 'on' && keyCl === 'off') {
             keySpanEn.className = "en hidden unselectable";
             keySpanRu.className = "ru hidden unselectable";
             keySpanEn_fn.className = "en_fn hidden unselectable";
             keySpanRu_fn.className = "ru_fn unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
+        }
+        if (language === 'en' && keyShift === 'off' && keyCl === 'on') {
+            keySpanEn.className = "en hidden unselectable";
+            keySpanRu.className = "ru hidden unselectable";
+            keySpanEn_fn.className = "en_fn hidden unselectable";
+            keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
+        }
+        if (language === 'en' && keyShift === 'on' && keyCl === 'on') {
+            keySpanEn.className = "en hidden unselectable";
+            keySpanRu.className = "ru hidden unselectable";
+            keySpanEn_fn.className = "en_fn hidden unselectable";
+            keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
+        }
+        if (language === 'ru' && keyShift === 'off' && keyCl === 'on') {
+            keySpanEn.className = "en hidden unselectable";
+            keySpanRu.className = "ru hidden unselectable";
+            keySpanEn_fn.className = "en_fn hidden unselectable";
+            keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl hidden unselectable";
+        }
+        if (language === 'ru' && keyShift === 'on' && keyCl === 'on') {
+            keySpanEn.className = "en hidden unselectable";
+            keySpanRu.className = "ru hidden unselectable";
+            keySpanEn_fn.className = "en_fn hidden unselectable";
+            keySpanRu_fn.className = "ru_fn hidden unselectable";
+
+            keySpanEn_cl.className = "en_cl hidden unselectable";
+            keySpanRu_cl.className = "ru_cl hidden unselectable";
+            keySpanEn_fn_cl.className = "en_fn_cl hidden unselectable";
+            keySpanRu_fn_cl.className = "ru_fn_cl unselectable";
         }
 
 
@@ -92,6 +165,10 @@ const createKeyboard = (language = 'en', keyCase = 'down') => {
         key.append(keySpanRu);
         key.append(keySpanEn_fn);
         key.append(keySpanRu_fn);
+        key.append(keySpanEn_cl);
+        key.append(keySpanRu_cl);
+        key.append(keySpanEn_fn_cl);
+        key.append(keySpanRu_fn_cl);
 
 
         if (index >= 0 && index <= 13) {
@@ -154,8 +231,7 @@ document.body.addEventListener('keydown', (event) => {
         if (event.code === "Enter") {
             setText('\n');
         }
-        if (event.keyCode === 8) {
-            setText('\t');
+        if (event.code === "Backspace") {
             textArea.value = textArea.value.slice(0,textArea.value.length-2)//переделать под курсор
         }
         if (event.code === "ArrowLeft") {
@@ -172,6 +248,7 @@ document.body.addEventListener('keydown', (event) => {
 
 
         else {
+            console.log(event.code);
             setText(event.key);
         }
 
@@ -186,6 +263,18 @@ document.body.addEventListener('keyup', (event) => {
         activeKey.classList.toggle("active");
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
 
 const changeLang = () => {
     language = (language == "en") ? "ru" : "en";
@@ -229,14 +318,36 @@ runOnKeys(
 
 
 
-document.addEventListener('keydown', function (event) {
-    if (event.shiftKey && language == "en") {
-        let keysEn = document.querySelectorAll('.en');
-        keysEn.forEach(elem => {
+document.addEventListener('keydown', function (event) {//Shift & CapsLock
+    if (event.code == "CapsLock") {
+        capsLock = !capsLock;
+    }
+    console.log("CapsLock", capsLock);
+
+    if (language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
-        let keysRu = document.querySelectorAll('.ru');
-        keysRu.forEach(elem => {
+        let keysEnCl = document.querySelectorAll('.en_cl');
+        keysEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+    if (language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRuCl = document.querySelectorAll('.ru_cl');
+        keysRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+
+    if (event.shiftKey && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
         let keysFnEn = document.querySelectorAll('.en_fn');
@@ -244,51 +355,107 @@ document.addEventListener('keydown', function (event) {
             elem.classList.remove("hidden");
         });
     };
-    if (event.shiftKey && language == "ru") {
-        let keysEn = document.querySelectorAll('.en');
-        keysEn.forEach(elem => {
-            elem.classList.add("hidden");
-        });
-        let keysRu = document.querySelectorAll('.ru');
-        keysRu.forEach(elem => {
+    if (event.shiftKey && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
         let keysFnRu = document.querySelectorAll('.ru_fn');
         keysFnRu.forEach(elem => {
             elem.classList.remove("hidden");
         });
-    }
+    };
+    if (event.shiftKey && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEnCl = document.querySelectorAll('.en_fn_cl');
+        keysFnEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+    if (event.shiftKey && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRuCl = document.querySelectorAll('.ru_fn_cl');
+        keysFnRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+
+
 });
 
 document.addEventListener('keyup', function (event) {
-    if (event.shiftKey === false && language == "en") {
-        let keysEn = document.querySelectorAll('.en');
-        keysEn.forEach(elem => {
-            elem.classList.remove("hidden");
-        });
-        let keysRu = document.querySelectorAll('.ru');
-        keysRu.forEach(elem => {
+    if (event.code == "CapsLock") {
+        capsLock = !capsLock;
+    }
+    console.log("CapsLock", capsLock);
+
+ if (language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
         let keysFnEn = document.querySelectorAll('.en_fn');
         keysFnEn.forEach(elem => {
-            elem.classList.add("hidden");
+            elem.classList.remove("hidden");
         });
     };
-    if (event.shiftKey === false && language == "ru") {
+    if (language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRu = document.querySelectorAll('.ru_fn');
+        keysFnRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+
+    if (event.shiftKey === false && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
         let keysEn = document.querySelectorAll('.en');
         keysEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+    if (event.shiftKey === false && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
         let keysRu = document.querySelectorAll('.ru');
         keysRu.forEach(elem => {
             elem.classList.remove("hidden");
         });
-        let keysFnRu = document.querySelectorAll('.ru_fn');
-        keysFnRu.forEach(elem => {
+    };
+    if (event.shiftKey === false && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
             elem.classList.add("hidden");
         });
-    }
+        let keysEnCl = document.querySelectorAll('.en_cl');
+        keysEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
+    if (event.shiftKey === false && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRuCl = document.querySelectorAll('.ru_cl');
+        keysRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    };
 });
 
 
