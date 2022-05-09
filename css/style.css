@@ -106,19 +106,16 @@ span {
 
 
 .ArrowUp span, .ArrowDown span{
-    line-height: 0px;
-    padding-top: 7px;
+    line-height: 15px;
 }
 
 .active {
-    margin: 0 auto;
-    height: 40px;
     border-radius: 20px;
     background-color: aqua;
-    transition: transform 0.3s;
+    transition: border-radius 0.3s;
 }
 
-span:hover {
+.key:hover {
     background-color: aqua;
 }
 

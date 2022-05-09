@@ -247,8 +247,8 @@ const KEYS = [
         volume: {
             en: "\\",
             ru: "\\",
-            en_fn: "||",
-            ru_fn: "//"
+            en_fn: "|",
+            ru_fn: "/"
         }
     },
     {
