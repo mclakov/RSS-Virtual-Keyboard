@@ -5,7 +5,11 @@ const KEYS = [
             en: "`",
             ru: "ё",
             en_fn: "~",
-            ru_fn: "Ё"
+            ru_fn: "Ё",
+            en_cl: "`",
+            ru_cl: "Ё",
+            en_fn_cl: "~",
+            ru_fn_cl: "ё",
         }
     },
     {
@@ -14,7 +18,11 @@ const KEYS = [
             en: "1",
             ru: "1",
             en_fn: "!",
-            ru_fn: "!"
+            ru_fn: "!",
+            en_cl: "1",
+            ru_cl: "1",
+            en_fn_cl: "!",
+            ru_fn_cl: "!",
         }
     },
     {
@@ -23,7 +31,11 @@ const KEYS = [
             en: "2",
             ru: "2",
             en_fn: "@",
-            ru_fn: "\""
+            ru_fn: "\"",
+            en_cl: "2",
+            ru_cl: "2",
+            en_fn_cl: "@",
+            ru_fn_cl: "\"",
         }
     },
     {
@@ -32,7 +44,11 @@ const KEYS = [
             en: "3",
             ru: "3",
             en_fn: "#",
-            ru_fn: "№"
+            ru_fn: "№",
+            en_cl: "3",
+            ru_cl: "3",
+            en_fn_cl: "#",
+            ru_fn_cl: "№",
         }
     },
     {
@@ -41,7 +57,11 @@ const KEYS = [
             en: "4",
             ru: "4",
             en_fn: "$",
-            ru_fn: ";"
+            ru_fn: ";",
+            en_cl: "4",
+            ru_cl: "4",
+            en_fn_cl: "$",
+            ru_fn_cl: ";",
         }
     },
     {
@@ -50,7 +70,11 @@ const KEYS = [
             en: "5",
             ru: "5",
             en_fn: "%",
-            ru_fn: "%"
+            ru_fn: "%",
+            en_cl: "5",
+            ru_cl: "5",
+            en_fn_cl: "%",
+            ru_fn_cl: "%",
         }
     },
     {
@@ -59,7 +83,11 @@ const KEYS = [
             en: "6",
             ru: "6",
             en_fn: "^",
-            ru_fn: ":"
+            ru_fn: ":",
+            en_cl: "6",
+            ru_cl: "6",
+            en_fn_cl: "^",
+            ru_fn_cl: ":",
         }
     },
     {
@@ -68,7 +96,11 @@ const KEYS = [
             en: "7",
             ru: "7",
             en_fn: "&",
-            ru_fn: "?"
+            ru_fn: "?",
+            en_cl: "7",
+            ru_cl: "7",
+            en_fn_cl: "&",
+            ru_fn_cl: "?",
         }
     },
     {
@@ -77,7 +109,11 @@ const KEYS = [
             en: "8",
             ru: "8",
             en_fn: "*",
-            ru_fn: "*"
+            ru_fn: "*",
+            en_cl: "8",
+            ru_cl: "8",
+            en_fn_cl: "*",
+            ru_fn_cl: "*",
         }
     },
     {
@@ -86,7 +122,11 @@ const KEYS = [
             en: "9",
             ru: "9",
             en_fn: "(",
-            ru_fn: "("
+            ru_fn: "(",
+            en_cl: "9",
+            ru_cl: "9",
+            en_fn_cl: "(",
+            ru_fn_cl: "(",
         }
     },
     {
@@ -95,7 +135,11 @@ const KEYS = [
             en: "0",
             ru: "0",
             en_fn: ")",
-            ru_fn: ")"
+            ru_fn: ")",
+            en_cl: "0",
+            ru_cl: "0",
+            en_fn_cl: ")",
+            ru_fn_cl: ")",
         }
     },
     {
@@ -104,7 +148,11 @@ const KEYS = [
             en: "-",
             ru: "-",
             en_fn: "_",
-            ru_fn: "_"
+            ru_fn: "_",
+            en_cl: "-",
+            ru_cl: "-",
+            en_fn_cl: "_",
+            ru_fn_cl: "_",
         }
     },
     {
@@ -113,7 +161,11 @@ const KEYS = [
             en: "=",
             ru: "=",
             en_fn: "+",
-            ru_fn: "+"
+            ru_fn: "+",
+            en_cl: "=",
+            ru_cl: "=",
+            en_fn_cl: "+",
+            ru_fn_cl: "+",
         }
     },
     {
@@ -122,7 +174,11 @@ const KEYS = [
             en: "Backspace",
             ru: "Backspace",
             en_fn: "Backspace",
-            ru_fn: "Backspace"
+            ru_fn: "Backspace",
+            en_cl: "Backspace",
+            ru_cl: "Backspace",
+            en_fn_cl: "Backspace",
+            ru_fn_cl: "Backspace",
         }
     },
     {
@@ -131,7 +187,11 @@ const KEYS = [
             en: "Tab",
             ru: "Tab",
             en_fn: "Tab",
-            ru_fn: "Tab"
+            ru_fn: "Tab",
+            en_cl: "Tab",
+            ru_cl: "Tab",
+            en_fn_cl: "Tab",
+            ru_fn_cl: "Tab",
         }
     },
     {
@@ -140,7 +200,11 @@ const KEYS = [
             en: "q",
             ru: "й",
             en_fn: "Q",
-            ru_fn: "Й"
+            ru_fn: "Й",
+            en_cl: "Q",
+            ru_cl: "Й",
+            en_fn_cl: "q",
+            ru_fn_cl: "й",
         }
     },
     {
@@ -149,7 +213,11 @@ const KEYS = [
             en: "w",
             ru: "ц",
             en_fn: "W",
-            ru_fn: "Ц"
+            ru_fn: "Ц",
+            en_cl: "",
+            ru_cl: "",
+            en_fn_cl: "",
+            ru_fn_cl: "",
         }
     },
     {
@@ -158,7 +226,11 @@ const KEYS = [
             en: "e",
             ru: "у",
             en_fn: "E",
-            ru_fn: "У"
+            ru_fn: "У",
+            en_cl: "E",
+            ru_cl: "У",
+            en_fn_cl: "e",
+            ru_fn_cl: "у",
         }
     },
     {
@@ -167,7 +239,11 @@ const KEYS = [
             en: "r",
             ru: "к",
             en_fn: "R",
-            ru_fn: "К"
+            ru_fn: "К",
+            en_cl: "R",
+            ru_cl: "К",
+            en_fn_cl: "r",
+            ru_fn_cl: "к",
         }
     },
     {
@@ -176,7 +252,11 @@ const KEYS = [
             en: "t",
             ru: "е",
             en_fn: "T",
-            ru_fn: "Е"
+            ru_fn: "Е",
+            en_cl: "T",
+            ru_cl: "Е",
+            en_fn_cl: "t",
+            ru_fn_cl: "е",
         }
     },
     {
@@ -185,7 +265,11 @@ const KEYS = [
             en: "y",
             ru: "н",
             en_fn: "Y",
-            ru_fn: "Н"
+            ru_fn: "Н",
+            en_cl: "Y",
+            ru_cl: "Н",
+            en_fn_cl: "y",
+            ru_fn_cl: "н",
         }
     },
     {
@@ -194,7 +278,11 @@ const KEYS = [
             en: "u",
             ru: "г",
             en_fn: "U",
-            ru_fn: "Г"
+            ru_fn: "Г",
+            en_cl: "U",
+            ru_cl: "Г",
+            en_fn_cl: "u",
+            ru_fn_cl: "г",
         }
     },
     {
@@ -203,7 +291,11 @@ const KEYS = [
             en: "i",
             ru: "ш",
             en_fn: "I",
-            ru_fn: "Ш"
+            ru_fn: "Ш",
+            en_cl: "I",
+            ru_cl: "Ш",
+            en_fn_cl: "i",
+            ru_fn_cl: "ш",
         }
     },
     {
@@ -212,7 +304,11 @@ const KEYS = [
             en: "o",
             ru: "щ",
             en_fn: "O",
-            ru_fn: "Щ"
+            ru_fn: "Щ",
+            en_cl: "O",
+            ru_cl: "Щ",
+            en_fn_cl: "o",
+            ru_fn_cl: "щ",
         }
     },
     {
@@ -221,7 +317,11 @@ const KEYS = [
             en: "p",
             ru: "з",
             en_fn: "P",
-            ru_fn: "З"
+            ru_fn: "З",
+            en_cl: "P",
+            ru_cl: "З",
+            en_fn_cl: "p",
+            ru_fn_cl: "з",
         }
     },
     {
@@ -230,7 +330,11 @@ const KEYS = [
             en: "[",
             ru: "х",
             en_fn: "{",
-            ru_fn: "Х"
+            ru_fn: "Х",
+            en_cl: "[",
+            ru_cl: "Х",
+            en_fn_cl: "{",
+            ru_fn_cl: "х",
         }
     },
     {
@@ -239,7 +343,11 @@ const KEYS = [
             en: "]",
             ru: "ъ",
             en_fn: "}",
-            ru_fn: "Ъ"
+            ru_fn: "Ъ",
+            en_cl: "]",
+            ru_cl: "Ъ",
+            en_fn_cl: "}",
+            ru_fn_cl: "ъ",
         }
     },
     {
@@ -248,7 +356,11 @@ const KEYS = [
             en: "\\",
             ru: "\\",
             en_fn: "|",
-            ru_fn: "/"
+            ru_fn: "/",
+            en_cl: "\\",
+            ru_cl: "\\",
+            en_fn_cl: "|",
+            ru_fn_cl: "/",
         }
     },
     {
@@ -257,7 +369,11 @@ const KEYS = [
             en: "CapsLock",
             ru: "CapsLock",
             en_fn: "CapsLock",
-            ru_fn: "CapsLock"
+            ru_fn: "CapsLock",
+            en_cl: "CapsLock",
+            ru_cl: "CapsLock",
+            en_fn_cl: "CapsLock",
+            ru_fn_cl: "CapsLock",
         }
     },
     {
@@ -266,7 +382,11 @@ const KEYS = [
             en: "a",
             ru: "ф",
             en_fn: "A",
-            ru_fn: "Ф"
+            ru_fn: "Ф",
+            en_cl: "A",
+            ru_cl: "Ф",
+            en_fn_cl: "a",
+            ru_fn_cl: "ф",
         }
     },
     {
@@ -275,7 +395,11 @@ const KEYS = [
             en: "s",
             ru: "ы",
             en_fn: "S",
-            ru_fn: "Ы"
+            ru_fn: "Ы",
+            en_cl: "S",
+            ru_cl: "Ы",
+            en_fn_cl: "s",
+            ru_fn_cl: "ы",
         }
     },
     {
@@ -284,7 +408,11 @@ const KEYS = [
             en: "d",
             ru: "в",
             en_fn: "D",
-            ru_fn: "В"
+            ru_fn: "В",
+            en_cl: "D",
+            ru_cl: "В",
+            en_fn_cl: "d",
+            ru_fn_cl: "в",
         }
     },
     {
@@ -293,7 +421,11 @@ const KEYS = [
             en: "f",
             ru: "а",
             en_fn: "F",
-            ru_fn: "А"
+            ru_fn: "А",
+            en_cl: "F",
+            ru_cl: "А",
+            en_fn_cl: "f",
+            ru_fn_cl: "а",
         }
     },
     {
@@ -302,7 +434,11 @@ const KEYS = [
             en: "g",
             ru: "п",
             en_fn: "G",
-            ru_fn: "П"
+            ru_fn: "П",
+            en_cl: "G",
+            ru_cl: "П",
+            en_fn_cl: "g",
+            ru_fn_cl: "п",
         }
     },
     {
@@ -311,7 +447,11 @@ const KEYS = [
             en: "h",
             ru: "р",
             en_fn: "H",
-            ru_fn: "Р"
+            ru_fn: "Р",
+            en_cl: "H",
+            ru_cl: "Р",
+            en_fn_cl: "h",
+            ru_fn_cl: "р",
         }
     },
     {
@@ -320,7 +460,11 @@ const KEYS = [
             en: "j",
             ru: "о",
             en_fn: "J",
-            ru_fn: "О"
+            ru_fn: "О",
+            en_cl: "J",
+            ru_cl: "О",
+            en_fn_cl: "j",
+            ru_fn_cl: "о",
         }
     },
     {
@@ -329,7 +473,11 @@ const KEYS = [
             en: "k",
             ru: "л",
             en_fn: "K",
-            ru_fn: "Л"
+            ru_fn: "Л",
+            en_cl: "K",
+            ru_cl: "Л",
+            en_fn_cl: "k",
+            ru_fn_cl: "л",
         }
     },
     {
@@ -338,7 +486,11 @@ const KEYS = [
             en: "l",
             ru: "д",
             en_fn: "L",
-            ru_fn: "Д"
+            ru_fn: "Д",
+            en_cl: "L",
+            ru_cl: "Д",
+            en_fn_cl: "l",
+            ru_fn_cl: "д",
         }
     },
     {
@@ -347,7 +499,11 @@ const KEYS = [
             en: ";",
             ru: "ж",
             en_fn: ":",
-            ru_fn: "Ж"
+            ru_fn: "Ж",
+            en_cl: ":",
+            ru_cl: "Ж",
+            en_fn_cl: ";",
+            ru_fn_cl: "ж",
         }
     },
     {
@@ -356,7 +512,11 @@ const KEYS = [
             en: "'",
             ru: "э",
             en_fn: "\"",
-            ru_fn: "Э"
+            ru_fn: "Э",
+            en_cl: "'",
+            ru_cl: "Э",
+            en_fn_cl: "\"",
+            ru_fn_cl: "э",
         }
     },
     {
@@ -365,7 +525,11 @@ const KEYS = [
             en: "Enter",
             ru: "Enter",
             en_fn: "Enter",
-            ru_fn: "Enter"
+            ru_fn: "Enter",
+            en_cl: "Enter",
+            ru_cl: "Enter",
+            en_fn_cl: "Enter",
+            ru_fn_cl: "Enter",
         }
     },
     {
@@ -374,7 +538,11 @@ const KEYS = [
             en: "Shift",
             ru: "Shift",
             en_fn: "Shift",
-            ru_fn: "Shift"
+            ru_fn: "Shift",
+            en_cl: "Shift",
+            ru_cl: "Shift",
+            en_fn_cl: "Shift",
+            ru_fn_cl: "Shift",
         }
     },
     {
@@ -383,7 +551,11 @@ const KEYS = [
             en: "z",
             ru: "я",
             en_fn: "Z",
-            ru_fn: "Я"
+            ru_fn: "Я",
+            en_cl: "Z",
+            ru_cl: "Я",
+            en_fn_cl: "z",
+            ru_fn_cl: "я",
         }
     },
     {
@@ -392,7 +564,11 @@ const KEYS = [
             en: "x",
             ru: "ч",
             en_fn: "X",
-            ru_fn: "Ч"
+            ru_fn: "Ч",
+            en_cl: "X",
+            ru_cl: "Ч",
+            en_fn_cl: "x",
+            ru_fn_cl: "ч",
         }
     },
     {
@@ -401,7 +577,11 @@ const KEYS = [
             en: "c",
             ru: "с",
             en_fn: "C",
-            ru_fn: "С"
+            ru_fn: "С",
+            en_cl: "C",
+            ru_cl: "С",
+            en_fn_cl: "c",
+            ru_fn_cl: "с",
         }
     },
     {
@@ -410,7 +590,11 @@ const KEYS = [
             en: "v",
             ru: "м",
             en_fn: "V",
-            ru_fn: "М"
+            ru_fn: "М",
+            en_cl: "V",
+            ru_cl: "М",
+            en_fn_cl: "v",
+            ru_fn_cl: "м",
         }
     },
     {
@@ -419,7 +603,11 @@ const KEYS = [
             en: "b",
             ru: "и",
             en_fn: "B",
-            ru_fn: "И"
+            ru_fn: "И",
+            en_cl: "B",
+            ru_cl: "И",
+            en_fn_cl: "b",
+            ru_fn_cl: "и",
         }
     },
     {
@@ -428,7 +616,11 @@ const KEYS = [
             en: "n",
             ru: "т",
             en_fn: "N",
-            ru_fn: "Т"
+            ru_fn: "Т",
+            en_cl: "N",
+            ru_cl: "Т",
+            en_fn_cl: "n",
+            ru_fn_cl: "т",
         }
     },
     {
@@ -437,7 +629,11 @@ const KEYS = [
             en: "m",
             ru: "ь",
             en_fn: "M",
-            ru_fn: "Ь"
+            ru_fn: "Ь",
+            en_cl: "M",
+            ru_cl: "Ь",
+            en_fn_cl: "m",
+            ru_fn_cl: "ь",
         }
     },
     {
@@ -446,7 +642,11 @@ const KEYS = [
             en: ",",
             ru: "б",
             en_fn: "<",
-            ru_fn: "Б"
+            ru_fn: "Б",
+            en_cl: ",",
+            ru_cl: "Б",
+            en_fn_cl: ",",
+            ru_fn_cl: "б",
         }
     },
     {
@@ -455,7 +655,11 @@ const KEYS = [
             en: ".",
             ru: "ю",
             en_fn: ">",
-            ru_fn: "Ю"
+            ru_fn: "Ю",
+            en_cl: ".",
+            ru_cl: "Ю",
+            en_fn_cl: ">",
+            ru_fn_cl: "ю",
         }
     },
     {
@@ -464,7 +668,11 @@ const KEYS = [
             en: "/",
             ru: ".",
             en_fn: "?",
-            ru_fn: ","
+            ru_fn: ",",
+            en_cl: "/",
+            ru_cl: ".",
+            en_fn_cl: "?",
+            ru_fn_cl: ",",
         }
     },
     {
@@ -473,7 +681,11 @@ const KEYS = [
             en: "Shift",
             ru: "Shift",
             en_fn: "Shift",
-            ru_fn: "Shift"
+            ru_fn: "Shift",
+            en_cl: "Shift",
+            ru_cl: "Shift",
+            en_fn_cl: "Shift",
+            ru_fn_cl: "Shift",
         }
     },
     {
@@ -482,7 +694,11 @@ const KEYS = [
             en: "Control",
             ru: "Control",
             en_fn: "Control",
-            ru_fn: "Control"
+            ru_fn: "Control",
+            en_cl: "Control",
+            ru_cl: "Control",
+            en_fn_cl: "Control",
+            ru_fn_cl: "Control",
         }
     },
     {
@@ -491,7 +707,11 @@ const KEYS = [
             en: "Option",
             ru: "Option",
             en_fn: "Option",
-            ru_fn: "Option"
+            ru_fn: "Option",
+            en_cl: "Option",
+            ru_cl: "Option",
+            en_fn_cl: "Option",
+            ru_fn_cl: "Option",
         }
     },
     {
@@ -500,7 +720,11 @@ const KEYS = [
             en: "Command",
             ru: "Command",
             en_fn: "Command",
-            ru_fn: "Command"
+            ru_fn: "Command",
+            en_cl: "Command",
+            ru_cl: "Command",
+            en_fn_cl: "Command",
+            ru_fn_cl: "Command",
         }
     },
     {
@@ -509,7 +733,11 @@ const KEYS = [
             en: " ",
             ru: " ",
             en_fn: " ",
-            ru_fn: " "
+            ru_fn: " ",
+            en_cl: " ",
+            ru_cl: " ",
+            en_fn_cl: " ",
+            ru_fn_cl: " ",
         }
     },
     {
@@ -518,7 +746,11 @@ const KEYS = [
             en: "Command",
             ru: "Command",
             en_fn: "Command",
-            ru_fn: "Command"
+            ru_fn: "Command",
+            en_cl: "Command",
+            ru_cl: "Command",
+            en_fn_cl: "Command",
+            ru_fn_cl: "Command",
         }
     },
     {
@@ -527,7 +759,11 @@ const KEYS = [
             en: "Option",
             ru: "Option",
             en_fn: "Option",
-            ru_fn: "Option"
+            ru_fn: "Option",
+            en_cl: "Option",
+            ru_cl: "Option",
+            en_fn_cl: "Option",
+            ru_fn_cl: "Option",
         }
     },
     {
@@ -536,7 +772,11 @@ const KEYS = [
             en: "&#x2190",
             ru: "&#x2190",
             en_fn: "&#x2190",
-            ru_fn: "&#x2190"
+            ru_fn: "&#x2190",
+            en_cl: "&#x2190",
+            ru_cl: "&#x2190",
+            en_fn_cl: "&#x2190",
+            ru_fn_cl: "&#x2190",
         }
     },
     {
@@ -545,7 +785,11 @@ const KEYS = [
             en: "&#x2191",
             ru: "&#x2191",
             en_fn: "&#x2191",
-            ru_fn: "&#x2191"
+            ru_fn: "&#x2191",
+            en_cl: "&#x2191",
+            ru_cl: "&#x2191",
+            en_fn_cl: "&#x2191",
+            ru_fn_cl: "&#x2191",
         }
     },
     {
@@ -554,7 +798,11 @@ const KEYS = [
             en: "&#x2193",
             ru: "&#x2193",
             en_fn: "&#x2193",
-            ru_fn: "&#x2193"
+            ru_fn: "&#x2193",
+            en_cl: "&#x2193",
+            ru_cl: "&#x2193",
+            en_fn_cl: "&#x2193",
+            ru_fn_cl: "&#x2193",
         }
     },
     {
@@ -563,7 +811,11 @@ const KEYS = [
             en: "&#x2192",
             ru: "&#x2192",
             en_fn: "&#x2192",
-            ru_fn: "&#x2192"
+            ru_fn: "&#x2192",
+            en_cl: "&#x2192",
+            ru_cl: "&#x2192",
+            en_fn_cl: "&#x2192",
+            ru_fn_cl: "&#x2192",
         }
     }
 ];

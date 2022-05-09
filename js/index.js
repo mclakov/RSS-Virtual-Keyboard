@@ -140,21 +140,47 @@ document.body.addEventListener('mouseup', (event) => {
 });
 
 document.body.addEventListener('keydown', (event) => {
-    event.preventDefault();
-    console.log(event.code);
+    // event.preventDefault();
+    console.log("event.code", event.code);
     let activeKey = document.querySelector(`.${event.code}`);
     if (activeKey != null && activeKey != undefined) {// выделение кнопки
         activeKey.classList.toggle("active");
     }
     ;
     if (activeKey != null && activeKey != undefined && !event.ctrlKey) {// добавление текста по нажатию кнопки
-        setText(event.key);
+        if (event.code === "Tab") {
+            setText('\t');
+        }
+        if (event.code === "Enter") {
+            setText('\n');
+        }
+        if (event.keyCode === 8) {
+            setText('\t');
+            textArea.value = textArea.value.slice(0,textArea.value.length-2)//переделать под курсор
+        }
+        if (event.code === "ArrowLeft") {
+            textArea.selectionStart = 2;
+            textArea.selectionEnd = 2;
+            console.log(textArea.selectionEnd, textArea.selectionStart);
+        }
+        // ArrowLeft
+        // ArrowRight
+        // ArrowUp
+        // ArrowDown
+
+
+
+
+        else {
+            setText(event.key);
+        }
+
     }
     ;
 });
 
 document.body.addEventListener('keyup', (event) => {
-    event.preventDefault();
+    // event.preventDefault();
     let activeKey = document.querySelector(`.${event.code}`);
     if (activeKey != null && activeKey != undefined) {
         activeKey.classList.toggle("active");
