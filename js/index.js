@@ -47,7 +47,7 @@ keyboard.append(row_5);
 container.append(h2);
 
 
-const createKeyboard = (language = 'en', keyShift = 'off', keyCl = 'off') => {
+const createKeyboard = (language = "en", keyShift = 'off', keyCl = 'off') => {
 
     KEYS.map((elem, index) => {
         let key = document.createElement('div');
@@ -197,7 +197,16 @@ const createKeyboard = (language = 'en', keyShift = 'off', keyCl = 'off') => {
 
 
 const setText = (letter) => {
-    textArea.value += letter;
+    if (textArea.selectionStart == 0 && textArea.selectionEnd == 0 && textArea.value == "") {
+        textArea.value += letter;
+    } else {
+        let textStart = textArea.value.slice(0, textArea.selectionStart);
+        let textEnd = textArea.value.slice(textArea.selectionEnd, textArea.value.length);
+        console.log("textArea.selectionStart", textArea.selectionStart);
+        console.log("textArea.selectionEnd", textArea.selectionEnd);
+        textArea.value = textStart + letter + textEnd;
+    }
+
 };
 /////////////////////////////
 //MOUSE
@@ -205,12 +214,29 @@ const setText = (letter) => {
 
 let target = '';
 
-document.body.addEventListener('mousedown', (event) => {
+keyboard.addEventListener('mousedown', (event) => {
     target = event.target;
     if (target.closest('span')) {
         target.closest('.key').classList.toggle("active");
-        setText(target.closest('span').innerHTML);
+
+
+        if (target.closest('span').innerHTML == "Backspace") {
+            textArea.value = textArea.value.slice(0, textArea.value.length - 1);
+        }
+        if (target.closest('span').innerHTML == "Tab") {
+            setText('\t');
+        }
+        if (target.closest('span').innerHTML == "Enter") {
+            setText('\n');
+        }
+         if (target.closest('span').innerHTML != "Backspace" && target.closest('span').innerHTML != "Tab"  && target.closest('span').innerHTML !=  "Enter"  && target.closest('span').innerHTML !=  "CapsLock"  && target.closest('span').innerHTML !=  "Shift"  && target.closest('span').innerHTML !=  "Control" && target.closest('span').innerHTML !=  "Option"  && target.closest('span').innerHTML !=  "Command") {
+             setText(target.closest('span').innerHTML);
+         }
+
     }
+
+
+
 
 
     if (target.closest('span').innerHTML == "CapsLock") {
@@ -343,7 +369,7 @@ document.body.addEventListener('mousedown', (event) => {
 
 });
 
-document.body.addEventListener('mouseup', (event) => {
+keyboard.addEventListener('mouseup', (event) => {
     target = event.target;
 
     let keys = document.querySelectorAll('.key');
@@ -494,6 +520,8 @@ document.body.addEventListener('keydown', (event) => {
     }
     ;
     if (activeKey != null && activeKey != undefined && !event.ctrlKey) {// добавление текста по нажатию кнопки
+
+
         if (event.code === "Tab") {
             setText('\t');
         }
@@ -501,27 +529,46 @@ document.body.addEventListener('keydown', (event) => {
             setText('\n');
         }
         if (event.code === "Backspace") {
-            textArea.value = textArea.value.slice(0, textArea.value.length - 2)//переделать под курсор
+            textArea.value = textArea.value.slice(0, textArea.value.length - 1)//переделать под курсор
         }
         if (event.code === "ArrowLeft") {
-            textArea.selectionStart = 2;
-            textArea.selectionEnd = 2;
-            console.log(textArea.selectionEnd, textArea.selectionStart);
+            setText("←");
         }
-            // ArrowLeft
-            // ArrowRight
-            // ArrowUp
-        // ArrowDown
-
-
-        else {
-            console.log(event.code);
-            setText(event.key);
+        if (event.code === "ArrowUp") {
+            setText("↑");
+        }
+        if (event.code === "ArrowDown") {
+            setText("↓");
+        }
+        if (event.code === "ArrowRight") {
+            setText("→");
+        }
+//Backspace Tab Enter CapsLock ShiftLeft ShiftRight ControlLeft AltLeft MetaLeft MetaRight AltRight ArrowLeft ArrowUp ArrowDown ArrowRight
+      if (event.code != "Backspace" && event.code != "Tab"  && event.code !=  "Enter"  && event.code !=  "CapsLock"  && event.code !=  "ShiftLeft"  && event.code !=  "ShiftRight"  && event.code !=  "ControlLeft"  && event.code !=  "ControlRight"  && event.code !=  "AltLeft"  && event.code !=  "AltRight"  && event.code !=  "MetaLeft"  && event.code !=  "MetaRight"  && event.code !=  "ArrowLeft"  && event.code !=  "ArrowUp"  && event.code !=  "ArrowDown"  && event.code !=  "ArrowRight" ) {
+            if (capsLock && shift) {
+                setText(event.key.toLowerCase());
+            }
+          if (capsLock && !shift) {
+              setText(event.key.toUpperCase());
+          }
+          if (!capsLock && !shift) {
+              setText(event.key.toLowerCase());
+          }
+          if (!capsLock && shift) {
+              setText(event.key.toUpperCase());
+          }
         }
 
     }
     ;
 });
+
+
+
+textArea.addEventListener("focus", ()=>{
+    textArea.blur();
+})
+
 
 document.body.addEventListener('keyup', (event) => {
     let activeKey = document.querySelector(`.${event.code}`);
@@ -535,6 +582,7 @@ document.body.addEventListener('keyup', (event) => {
 const changeLang = () => {
     language = (language == "en") ? "ru" : "en";
     console.log("language", language);
+    localStorage.setItem('lang', language);
     let keysEn = document.querySelectorAll('.en');
     keysEn.forEach(elem => {
         elem.classList.toggle("hidden");
@@ -791,5 +839,6 @@ document.addEventListener('keyup', function (event) {
     ;
 });
 
+let l = localStorage.getItem('lang');
 
-createKeyboard();
+createKeyboard(l);
