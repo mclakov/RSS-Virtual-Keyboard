@@ -216,74 +216,271 @@ document.body.addEventListener('mousedown', (event) => {
     if (target.closest('span').innerHTML == "CapsLock") {
         target.closest('.key').id = "id_capslock"
         capsLock = !capsLock;
+    }
+    if (target.closest('span').innerHTML == "Shift") {
+        target.closest('.key').id = "Shift"
+        shift = true;
+    }
 
 
-        if (language == "en" && capsLock) {
-            let keys = document.querySelectorAll('span');
-            keys.forEach(elem => {
-                elem.classList.add("hidden");
-            });
-            let keysEnCl = document.querySelectorAll('.en_cl');
-            keysEnCl.forEach(elem => {
-                elem.classList.remove("hidden");
-            });
-        }
-        ;
-        if (language == "ru" && capsLock) {
-            let keys = document.querySelectorAll('span');
-            keys.forEach(elem => {
-                elem.classList.add("hidden");
-            });
-            let keysRuCl = document.querySelectorAll('.ru_cl');
-            keysRuCl.forEach(elem => {
-                elem.classList.remove("hidden");
-            });
-        }
-        ;
 
 
-        if (language == "en" && !capsLock) {
-            let keys = document.querySelectorAll('span');
-            keys.forEach(elem => {
-                elem.classList.add("hidden");
-            });
-            let keysFnEn = document.querySelectorAll('.en');
-            keysFnEn.forEach(elem => {
-                elem.classList.remove("hidden");
-            });
-        }
-        ;
-        if (language == "ru" && !capsLock) {
-            let keys = document.querySelectorAll('span');
-            keys.forEach(elem => {
-                elem.classList.add("hidden");
-            });
-            let keysRu = document.querySelectorAll('.ru');
-            keysRu.forEach(elem => {
-                elem.classList.remove("hidden");
-            });
-        }
-        ;
-
-
+    if (shift && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEn = document.querySelectorAll('.en_fn');
+        keysFnEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
     }
     ;
+    if (shift && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRu = document.querySelectorAll('.ru_fn');
+        keysFnRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEnCl = document.querySelectorAll('.en_fn_cl');
+        keysFnEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRuCl = document.querySelectorAll('.ru_fn_cl');
+        keysFnRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysEn = document.querySelectorAll('.en');
+        keysEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRu = document.querySelectorAll('.ru');
+        keysRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysEnCl = document.querySelectorAll('.en_cl');
+        keysEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRuCl = document.querySelectorAll('.ru_cl');
+        keysRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
 
 document.body.addEventListener('mouseup', (event) => {
-
+    target = event.target;
 
     let keys = document.querySelectorAll('.key');
     keys.forEach(elem => {
         if (elem.id == "id_capslock" && capsLock) {
-            elem.closest('.key').classList.add("active");
-
+            // elem.closest('.key').classList.add("active");
         } else {
             elem.classList.remove("active");
         }
-
+        if (target.closest('span').innerHTML == "Shift") {
+            shift = false;
+        }
     });
+
+
+
+
+
+    if (shift && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEn = document.querySelectorAll('.en_fn');
+        keysFnEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRu = document.querySelectorAll('.ru_fn');
+        keysFnRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEnCl = document.querySelectorAll('.en_fn_cl');
+        keysFnEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRuCl = document.querySelectorAll('.ru_fn_cl');
+        keysFnRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysEn = document.querySelectorAll('.en');
+        keysEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRu = document.querySelectorAll('.ru');
+        keysRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysEnCl = document.querySelectorAll('.en_cl');
+        keysEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRuCl = document.querySelectorAll('.ru_cl');
+        keysRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
 
@@ -381,17 +578,77 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         capsLock = !capsLock;
     }
     if (event.code == "ShiftLeft" || event.code == "ShiftRight") {
-        capsLock = !capsLock;
+        shift = true;
     }
 
 
-
-
-
-
-    console.log("CapsLock", capsLock);
-
-    if (language == "en" && capsLock) {
+    if (shift && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEn = document.querySelectorAll('.en_fn');
+        keysFnEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRu = document.querySelectorAll('.ru_fn');
+        keysFnRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "en" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnEnCl = document.querySelectorAll('.en_fn_cl');
+        keysFnEnCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift && language == "ru" && capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysFnRuCl = document.querySelectorAll('.ru_fn_cl');
+        keysFnRuCl.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysEn = document.querySelectorAll('.en');
+        keysEn.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "ru" && !capsLock) {
+        let keys = document.querySelectorAll('span');
+        keys.forEach(elem => {
+            elem.classList.add("hidden");
+        });
+        let keysRu = document.querySelectorAll('.ru');
+        keysRu.forEach(elem => {
+            elem.classList.remove("hidden");
+        });
+    }
+    ;
+    if (shift === false && language == "en" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -402,7 +659,7 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         });
     }
     ;
-    if (language == "ru" && capsLock) {
+    if (shift=== false && language == "ru" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -415,31 +672,36 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
     ;
 
 
-    if (language == "en" && !capsLock) {
-        let keys = document.querySelectorAll('span');
-        keys.forEach(elem => {
-            elem.classList.add("hidden");
-        });
-        let keysFnEn = document.querySelectorAll('.en');
-        keysFnEn.forEach(elem => {
-            elem.classList.remove("hidden");
-        });
-    }
-    ;
-    if (language == "ru" && !capsLock) {
-        let keys = document.querySelectorAll('span');
-        keys.forEach(elem => {
-            elem.classList.add("hidden");
-        });
-        let keysRu = document.querySelectorAll('.ru');
-        keysRu.forEach(elem => {
-            elem.classList.remove("hidden");
-        });
-    }
-    ;
 
 
-    if (event.shiftKey && language == "en" && !capsLock) {
+
+
+
+
+});
+
+
+
+
+
+
+
+
+/////////////////////////////
+//keyboard
+/////////////////////////////
+
+document.addEventListener('keyup', function (event) {
+    if (event.code == "CapsLock") {
+        capsLock = !capsLock;
+    }
+
+    if (event.code == "ShiftLeft" || event.code == "ShiftRight") {
+        shift = false;
+    }
+    console.log("CapsLock", capsLock);
+
+    if (shift && language == "en" && !capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -450,7 +712,7 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         });
     }
     ;
-    if (event.shiftKey && language == "ru" && !capsLock) {
+    if (shift && language == "ru" && !capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -461,7 +723,7 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         });
     }
     ;
-    if (event.shiftKey && language == "en" && capsLock) {
+    if (shift && language == "en" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -472,7 +734,7 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         });
     }
     ;
-    if (event.shiftKey && language == "ru" && capsLock) {
+    if (shift && language == "ru" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -483,18 +745,7 @@ document.addEventListener('keydown', function (event) {//Shift & CapsLock
         });
     }
     ;
-
-
-});
-
-document.addEventListener('keyup', function (event) {
-    if (event.code == "CapsLock") {
-        capsLock = !capsLock;
-    }
-    console.log("CapsLock", capsLock);
-
-
-    if (event.shiftKey === false && language == "en" && !capsLock) {
+    if (shift === false && language == "en" && !capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -505,7 +756,7 @@ document.addEventListener('keyup', function (event) {
         });
     }
     ;
-    if (event.shiftKey === false && language == "ru" && !capsLock) {
+    if (shift === false && language == "ru" && !capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -516,7 +767,7 @@ document.addEventListener('keyup', function (event) {
         });
     }
     ;
-    if (event.shiftKey === false && language == "en" && capsLock) {
+    if (shift === false && language == "en" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
@@ -527,7 +778,7 @@ document.addEventListener('keyup', function (event) {
         });
     }
     ;
-    if (event.shiftKey === false && language == "ru" && capsLock) {
+    if (shift === false && language == "ru" && capsLock) {
         let keys = document.querySelectorAll('span');
         keys.forEach(elem => {
             elem.classList.add("hidden");
