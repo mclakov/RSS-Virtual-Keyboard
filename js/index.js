@@ -4,7 +4,10 @@ import KEYS from './data.js';
 let language = 'en';
 let capsLock = false;
 let shift = false;
-
+const setLang = () => {
+    localStorage.setItem('lang', language);
+};
+setLang();
 
 const container = document.createElement('div');
 const h1 = document.createElement('h1');
@@ -579,6 +582,8 @@ document.body.addEventListener('keyup', (event) => {
 });
 
 
+
+
 const changeLang = () => {
     language = (language == "en") ? "ru" : "en";
     console.log("language", language);
@@ -840,5 +845,4 @@ document.addEventListener('keyup', function (event) {
 });
 
 let l = localStorage.getItem('lang');
-
 createKeyboard(l);
