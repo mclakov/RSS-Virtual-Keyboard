@@ -1,4 +1,4 @@
-import KEYS from '/js/data.js';
+import KEYS from './data.js';
 
 
 let language = 'en';
